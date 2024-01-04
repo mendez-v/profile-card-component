@@ -52,19 +52,8 @@ body {
   grid-template-rows: 1fr auto;
   place-items: center;
   font-family: 'kumbh', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden;
-  background: url(./assets/image/bg-pattern-top.svg) no-repeat top -85vh left 129%, url(./assets/image/bg-pattern-bottom.svg) no-repeat bottom -85vh right 129% var(--clr-1);
-}
-@media (width > 62.5rem) {
-  body {
-    background-position: top -80vh left -60%, bottom -83vh right -60%;
-  }
-}
-@media (height <= 25.75rem) {
-  body {
-    background-image: unset;
-    overflow: visible;
-  }
+  background: url("./assets/image/bg-pattern-top.svg") no-repeat, url("./assets/image/bg-pattern-bottom.svg") no-repeat var(--clr-1);
+  background-position: right 52vw bottom 35vh, left 48vw top 52vh;
 }
 
 .card {
