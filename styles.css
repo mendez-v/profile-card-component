@@ -1,0 +1,173 @@
+@font-face {
+  font-family: "Kumbh";
+  src: url(./assets/font/kumbhsans-bold.woff2) format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Kumbh";
+  src: url(./assets/font/kumbhsans-regular.woff2) format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body, h1, h2, h3, p, figure, ul {
+  margin: 0;
+}
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+img {
+  max-block-size: 100%;
+  max-inline-size: 100%;
+  vertical-align: middle;
+  font-style: italic;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --clr-1: hsl(185, 75%, 39%);
+  --clr-2: hsl(229, 23%, 23%);
+  --clr-3: hsl(227, 10%, 46%);
+  --clr-4: hsl(0, 0%, 59%);
+  --clr-5: hsl(0, 0%, 100%);
+}
+
+body {
+  min-block-size: 100vh;
+  min-block-size: 100svh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  font-family: 'kumbh', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  background: url(./assets/image/bg-pattern-top.svg) no-repeat top -85vh left 129%, url(./assets/image/bg-pattern-bottom.svg) no-repeat bottom -85vh right 129% var(--clr-1);
+}
+@media (width > 62.5rem) {
+  body {
+    background-position: top -80vh left -60%, bottom -83vh right -60%;
+  }
+}
+@media (height <= 25.75rem) {
+  body {
+    background-image: unset;
+    overflow: visible;
+  }
+}
+
+.card {
+  margin-block: 3.5em;
+  inline-size: clamp(326px, 86.9vw, 350px);
+  background-color: var(--clr-5);
+  border-radius: .94rem;
+  color: var(--clr-2);
+  overflow: hidden;
+}
+.card__header {
+  block-size: 8.75rem;
+}
+.card__bg {
+  block-size: 100%;
+  object-fit: cover;
+}
+.card__info {
+  position: relative;
+  padding-bottom: 1.58em;
+  text-align: center;
+}
+.card__user-photo {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  overflow: hidden;
+  border: .35rem solid var(--clr-5);
+}
+.card__user-name {
+  padding-top: 4.2em;
+  letter-spacing: .35px;
+}
+.card__user-name,
+.stats__number {
+  font-size: 1.125rem;
+}
+
+.card__user-age,
+.card__user-city,
+.stats__heading {
+  color: var(--clr-3)
+}
+.card__user-age {
+  font-weight: 400;
+}
+.card__user-city {
+  margin-top: .9em;
+  font-size: .875rem;
+  font-weight: 400;
+}
+.stats {
+  padding: 1.7em 0 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  border-top: .1rem solid hsl(from var(--clr-3) h s l / .2);
+}
+.stats__number {
+  font-weight: 700;
+}
+.stats__heading {
+  margin-top: .7em;
+  display: block;
+  font-size: .625rem;
+  letter-spacing: 1.5px;
+}
+.attr {
+  margin-top: -4.4rem;
+  padding-block: 2em;
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--clr-2);
+}
+.attr__link {
+  position: relative;
+  margin-inline: .3em;
+}
+.attr__link::after {
+  content: '';
+  position: absolute;
+  bottom: -.15rem;
+  left: 0;
+  inline-size: 100%;
+  block-size: .12rem;
+  background-color: currentColor;
+  transform: scale(1);
+  transition: transform .3s ease-in-out;
+}
+
+.attr__link:focus-visible {
+  outline: .15rem dotted currentColor;
+  outline-offset: .15rem;
+}
+.attr__link:focus-visible::after {
+  transform: scale(0);
+}
+
+@media (hover:hover) {
+  .attr__link:hover::after {
+    transform: scale(0);
+  }
+}
