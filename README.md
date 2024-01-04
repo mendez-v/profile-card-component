@@ -26,7 +26,7 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 
 ## Link
 
-[Demo](https://mendez-v.github.io/profile-card-component/) 👀
+[Live](https://mendez-v.github.io/profile-card-component/) 👀
 
 ## Built with
 
