@@ -8,7 +8,7 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 
 - [The challenge](#the-challenge)
 - [Screenshot](#screenshot)
-- [Link](#link)
+- [Links](#links)
 - [Built with](#built-with)
 - [Author](#author)
 
@@ -24,9 +24,11 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 ### 💻 Desktop
 ![Desktop](./assets/image/desktop-preview.webp)
 
-## Link
+## Links
 
 [Live](https://mendez-v.github.io/profile-card-component/) 👀
+
+[Frontend Mentor](https://www.frontendmentor.io/solutions/profile-card-component-Hx134wFbXe) 👀
 
 ## Built with
 
